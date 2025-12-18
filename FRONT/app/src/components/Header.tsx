@@ -26,7 +26,7 @@ function Header(){
               h={{base:"50px", "2xl":"55px"}}>
                 <Add/>
               </Button>
-             <Button  borderRadius={'full'} 
+             {/* <Button  borderRadius={'full'} 
               bgImage={`${buttonsBG}`} 
               bgPos={"center"} 
               _hover={{opacity:1}} 
@@ -37,7 +37,7 @@ function Header(){
               h={{base:"50px", "2xl":"55px"}}
               > 
                  <Chevrone/>
-              </Button>
+              </Button> */}
              <Button  borderRadius={'full'} 
               bgImage={`${buttonsBG}`} 
               bgPos={"center"} 
