@@ -5,7 +5,7 @@ import {
     Flex,
     Button
 } from "@chakra-ui/react"
-// import Chevrone from "../Icons/Chevrone";
+import Chevrone from "../Icons/Chevrone";
 import Menu from "../Icons/Menu";
 import Add from "../Icons/Add";
 import { useState } from "react";
@@ -26,7 +26,8 @@ function Header({isOpenedList,isID,setID,setList}:Props){
         <>
         <Box  mt={6}   display={"flex"} flexDir={"column"} gap={2}  >
            <Flex justifyContent = {"space-between"}>
-             <Button  borderRadius={'full'}  
+            {!isOpenedList ?
+              <Button borderRadius={'full'}  
               boxShadow={"0 0 170px 9px white"}
               bgImage={`${buttonsBG}`} 
               bgPos={"center"} 
@@ -38,7 +39,11 @@ function Header({isOpenedList,isID,setID,setList}:Props){
               h={{base:"50px", "2xl":"55px"}}>
                 <Add/>
               </Button>
-             {/* <Button  borderRadius={'full'} 
+              :""
+             }
+             
+             { isOpenedList ? <Button onClick={()=>{setList(false)}}
+              borderRadius={'full'} 
               boxShadow={"0 0 170px 9px white"}
               bgImage={`${buttonsBG}`} 
               bgPos={"center"} 
@@ -50,7 +55,10 @@ function Header({isOpenedList,isID,setID,setList}:Props){
               h={{base:"50px", "2xl":"55px"}}
               > 
                  <Chevrone/>
-              </Button> */}
+              </Button>
+              :""
+              }
+              { !isOpenedList ?
              <Button  borderRadius={'full'} 
               boxShadow={"0 0 170px 9px white"}
               bgImage={`${buttonsBG}`} 
@@ -65,18 +73,20 @@ function Header({isOpenedList,isID,setID,setList}:Props){
               >
                  <Menu/>
               </Button>
+              :''
+              }
            </Flex>
            {isOpenedList 
-           ? <Flex  h={"25vh"} p={1} w={{base:"83vw",sm:"100%"}} rounded={'20px'} bg={'#241816'} flexDir={'column'} border={"2px solid black"} boxShadow={"0 110px 600px -50px white"}>
+           ? <Flex  h={"25vh"} p={1}  w={{base:"83vw",sm:"100%"}} rounded={'20px'} bg={'#241816'} flexDir={'column'}  boxShadow={"0 110px 600px -50px white"}>
               <Box as="nav" h={"3vh"} w={{base:"100%"}}  display={'flex'} justifyContent={"space-between"}>
-                 <Button onClick={()=>{setID(1)}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID ===1 ? '6px double black' : ''} borderBottom={'none'}  roundedTopLeft={'20px'} overflow={'hidden'} ml={isID=== 1 ? '-2px' :'none'} roundedTopRight={'20px'} w={'100%'} bgImage={buttonsBG} bgPos={"bottom"}>
+                 <Button onClick={()=>{setID(1)}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID ===1 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={'20px'} overflow={'hidden'} ml={isID=== 1 ? '-2px' :'none'} roundedTopRight={'20px'} w={'100%'} bgImage={buttonsBG} bgPos={"bottom"}>
                   <Link  w={'90vw'}    textDecoration="none" _active={{textDecoration:'none'}}  h={"100%"}   fontFamily={'fantasy'} fontSize={{base:"15px",md:"20px"}}  display={'flex'} justifyContent={'center'} alignItems={'center'} mt={3}>All</Link>
                  </Button>
-                 <Button onClick={()=>{setID(2)}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID === 2 ? '6px double black' : ''} borderBottom={'none'}  roundedTopLeft={ '20px'} overflow={'hidden'} roundedTopRight={'20px'} w={'100%'} mr={isID ===2 ? '-2px' :''} bgImage={buttonsBG} bgPos={"bottom"}>
+                 <Button onClick={()=>{setID(2)}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID === 2 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={ '20px'} overflow={'hidden'} roundedTopRight={'20px'} w={'100%'} mr={isID ===2 ? '-2px' :''} bgImage={buttonsBG} bgPos={"bottom"}>
                   <Link  w={'90vw'} textAlign={'center'} h={"100%"}  fontSize={{base:"15px",md:"20px"}}  fontFamily={'fantasy'} display={'flex'} justifyContent={'center'} alignItems={'center'} mt={1} ><span style={{fontFamily:"mono"}} >F</span> avourited </Link>
                  </Button>
               </Box>
-              <Flex  w={'100%'} h={'90vh'} mt={'10px'} p={"5px"}  bgImage={buttonsBG}  borderRadius={'20px'} bgPos={'left'}   roundedTop={'none'}>
+              <Flex  w={'100%'} h={'90vh'} mt={'5px'} p={"5px"}  bgImage={buttonsBG}  borderRadius={'20px'} bgPos={'left'}   roundedTop={'none'}>
                 <Box w="100vw" h={'full'} bg='black' borderBottomRadius={'20px'}>
 
                 </Box>

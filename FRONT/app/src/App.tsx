@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import { useState } from "react";
 
 function App() {
-  const [isOpenedList,setList] = useState(true);
+  const [isOpenedList,setList] = useState(false);
   const [isID,setID] = useState(1)
 
   return ( 
