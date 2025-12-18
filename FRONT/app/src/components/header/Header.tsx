@@ -5,15 +5,15 @@ import {
     Flex,
     Button
 } from "@chakra-ui/react"
-import  All from "../pages/All"
-import Chevrone from "../Icons/Chevrone";
-import Menu from "../Icons/Menu";
-import Add from "../Icons/Add";
+import  All from "../../pages/All"
+import Chevrone from "../../Icons/Chevrone";
+import Menu from "../../Icons/Menu";
+import Add from "../../Icons/Add";
 import { useState } from "react";
 import {Router,Route,useNavigate,Routes } from "react-router-dom"
 
-import buttonsBG from "../backgrounds/buttonsBG.jpg"
-import Favourited from "../pages/Fovourited";
+import buttonsBG from "../../backgrounds/buttonsBG.jpg"
+import Favourited from "../../pages/Fovourited";
 
 
 // TYPE CHECKING
@@ -93,10 +93,10 @@ function Header({isOpenedList,isID,setID,setList}:Props){
            {isOpenedList 
            ? <Flex  h={"25vh"} p={1}  w={{base:"83vw",sm:"100%"}} rounded={'20px'} bg={'#241816'} flexDir={'column'}  boxShadow={"0 110px 600px -50px white"}>
               <Box as="nav" h={"3vh"} w={{base:"100%"}}  display={'flex'} justifyContent={"space-between"}>
-                 <Button onClick={()=>{navigation(1,"/all")}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID ===1 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={'20px'} overflow={'hidden'} ml={isID=== 1 ? '-2px' :'none'} roundedTopRight={'20px'} w={'100%'} bgImage={buttonsBG} bgPos={"bottom"}>
+                 <Button onClick={()=>{navigation(1,"/all")}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID ===1 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={'20px'} overflow={'hidden'} ml={isID=== 1 ? '-2.5px' :'none'} roundedTopRight={'20px'} w={'100%'} bgImage={buttonsBG} bgPos={"bottom"}>
                   <Link  w={'90vw'}    textDecoration="none" _active={{textDecoration:'none'}}  h={"100%"}   fontFamily={'fantasy'} fontSize={{base:"15px",md:"20px"}}  display={'flex'} justifyContent={'center'} alignItems={'center'} mt={3}>All</Link>
                  </Button>
-                 <Button onClick={()=>{navigation(2,"/favourited")}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID === 2 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={ '20px'} overflow={'hidden'} roundedTopRight={'20px'} w={'100%'} mr={isID ===2 ? '-2px' :''} bgImage={buttonsBG} bgPos={"bottom"}>
+                 <Button onClick={()=>{navigation(2,"/favourited")}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID === 2 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={ '20px'} overflow={'hidden'} roundedTopRight={'20px'} w={'100%'} mr={isID ===2 ? '-2.5px' :''} bgImage={buttonsBG} bgPos={"bottom"}>
                   <Link  w={'90vw'} textAlign={'center'} h={"100%"}  fontSize={{base:"15px",md:"20px"}}  fontFamily={'fantasy'} display={'flex'} justifyContent={'center'} alignItems={'center'} mt={1} ><span style={{fontFamily:"mono"}} >F</span> avourited </Link>
                  </Button>
               </Box>
