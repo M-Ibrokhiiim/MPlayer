@@ -38,7 +38,7 @@ function Header({isOpenedList,isID,setID,setList}:Props){
 
       return(
         <>
-        <Box  mt={6}   display={"flex"} flexDir={"column"} gap={2}  >
+        <Box  mt={6}   display={"flex"} flexDir={"column"} gap={2}  transition={'all 10s ease'} >
            <Flex justifyContent = {"space-between"}>
             {!isOpenedList ?
               <Button borderRadius={'full'}  
@@ -91,16 +91,22 @@ function Header({isOpenedList,isID,setID,setList}:Props){
               }
            </Flex>
            {isOpenedList 
-           ? <Flex  h={"25vh"} p={1}  w={{base:"83vw",sm:"100%"}} rounded={'20px'} bg={'#241816'} flexDir={'column'}  boxShadow={"0 110px 600px -50px white"}>
+           ? <Flex  h={"25vh"} p={1}  w={{base:"83vw",sm:"100%"}} transitionProperty={'all'} transitionDuration={'1s'} transitionDelay={'10s'}  rounded={'20px'} bg={'#241816'} flexDir={'column'}  boxShadow={"0 110px 600px -50px white"}>
               <Box as="nav" h={"3vh"} w={{base:"100%"}}  display={'flex'} justifyContent={"space-between"}>
-                 <Button onClick={()=>{navigation(1,"/all")}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID ===1 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={'20px'} overflow={'hidden'} ml={isID=== 1 ? '-2.5px' :'none'} roundedTopRight={'20px'} w={'100%'} bgImage={buttonsBG} bgPos={"bottom"}>
-                  <Link  w={'90vw'}    textDecoration="none" _active={{textDecoration:'none'}}  h={"100%"}   fontFamily={'fantasy'} fontSize={{base:"15px",md:"20px"}}  display={'flex'} justifyContent={'center'} alignItems={'center'} mt={3}>All</Link>
+                 <Button onClick={()=>{navigation(1,"/all")}} _hover={{opacity:1}} _active={{opacity:1,transition:"all 3.5s ease"}}  padding={'none'} borderRadius={'none'} h={'40px'}   border={isID ===1 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={'20px'} overflow={'hidden'} ml={isID=== 1 ? '-2.5px' :'none'} roundedTopRight={'20px'} w={'100%'} bgImage={buttonsBG} bgPos={"bottom"}
+                     textDecoration="none"     fontFamily={'fantasy'} fontSize={{base:"15px",md:"20px"}}  display={'flex'} justifyContent={'center'} alignItems={'center'} mt={1}
+                  >
+                   <span style={{marginTop:"10px"}}>All </span>
                  </Button>
-                 <Button onClick={()=>{navigation(2,"/favourited")}} _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID === 2 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={ '20px'} overflow={'hidden'} roundedTopRight={'20px'} w={'100%'} mr={isID ===2 ? '-2.5px' :''} bgImage={buttonsBG} bgPos={"bottom"}>
-                  <Link  w={'90vw'} textAlign={'center'} h={"100%"}  fontSize={{base:"15px",md:"20px"}}  fontFamily={'fantasy'} display={'flex'} justifyContent={'center'} alignItems={'center'} mt={1} ><span style={{fontFamily:"mono"}} >F</span> avourited </Link>
+                 <Button onClick={()=>{navigation(2,"/favourited")}}  _hover={{opacity:1}} _active={{opacity:1}}  padding={'none'} borderRadius={'none'}  border={isID === 2 ? '10px double black' : ''} borderBottom={'none'}  roundedTopLeft={ '20px'} overflow={'hidden'} roundedTopRight={'20px'} w={'100%'} mr={isID ===2 ? '-2.5px' :''} bgImage={buttonsBG} bgPos={"bottom"}
+                     textAlign={'center'}   h={"40px"}  mt={1} fontSize={{base:"15px",md:"20px"}}  fontFamily={'fantasy'} display={'flex'} justifyContent={'center'} alignItems={'center'}  
+                  >
+                    <Text mt={1}>
+                      <span style={{fontFamily:"mono"}} >F</span> avourited  
+                    </Text>
                  </Button>
               </Box>
-              <Flex  w={'100%'} h={'90vh'} mt={'5.5px'} p={"5px"}  bgImage={buttonsBG}  borderRadius={'20px'} bgPos={'left'}   roundedTop={'none'}>
+              <Flex  w={'100%'} h={'92vh'} mt={'5.5px'} p={"5px"}  bgImage={buttonsBG}  borderRadius={'20px'} bgPos={'left'}   roundedTop={'none'}>
                 <Box w="100vw" h={'full'} bg='black' borderBottomRadius={'20px'}>
                   <Routes>
                     <Route path={"/all"} element={<All/>} /> 
