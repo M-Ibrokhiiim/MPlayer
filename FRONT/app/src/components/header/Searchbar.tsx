@@ -6,15 +6,15 @@ import Search from "../../Icons/Search";
 function Searchbar(){
       return(
         <>
-            <Box w={'100%'} h={"4vh"} mt={2} position={'relative'}  backdropFilter={'blur(100px)'}  display={'flex'} alignItems={'center'}>
-                <Box p={1} position={'absolute'} rounded={"130px"} w={"84%"}  zIndex={9} left={0} bgImage={backgrounde2}  display={'flex'} alignItems={'center'} justifyContent={'center'} bgPos={'top'}>
+            <Box w={'100%'} h={"4vh"} mt={3} mb={-1} position={'relative'}  backdropFilter={'blur(100px)'}  display={'flex'} alignItems={'center'}>
+                <Box p={'3px'} position={'absolute'} rounded={"130px"} w={"84%"}  zIndex={9} left={0} bgImage={backgrounde2}  display={'flex'} alignItems={'center'} justifyContent={'center'} bgPos={'top'}>
                     <Input  
                         type="text"
                         fontSize="21px"
                         fontFamily="serif"
                         fontWeight="700"
                         color="#e0f0f0ff"
-                        bg="#0a1111ff"
+                        bg="BLACK"
                         border="2px solid black"
                         h="3vh"
                         w="100%"
@@ -41,7 +41,7 @@ function Searchbar(){
                         }}
                     />
                 </Box>
-                <Text bg={"red"} position={'absolute'} left={"16vw"} w={'40px'} h={'7px'}  bgImg={backgrounde2} bgPos={'right'} />
+                <Text bg={"red"} position={'absolute'} left={"16vw"} w={'40px'} h={'5px'}  bgImg={backgrounde2} bgPos={'right'} />
                 <Box bg={'red'}  bgImage={backgrounde2} ml={"-2px"} display={'flex'} justifyContent={'center'} _placeholder={{fontsize:"10px"}}  bgPos={'center'} transition="transform 0.15s ease"
               _active={{transform: "scale(0.8)",}}   alignItems={'center'} pos={'absolute'} overflow={'hidden'}  border={"7px double black"} w={'50px'} h={'50px'} rounded={'100px'} left={'17.5vw'} zIndex={2}>
                     <Button w={'130px'} h={'110px'} bgImage={backgrounde2} _hover={{opacity:1}}    transition="transform 0.15s ease"
