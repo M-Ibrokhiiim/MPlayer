@@ -9,16 +9,16 @@ export default function Favourited() {
         roundedTop={0}
         w="99%"
         ml="1px"
-        mb={2}
+        mb={3}
         opacity={0}
         transform="translateY(10px)"
-        animation="fadeIn 0.3s ease forwards"
+        animation="fadeIn 1s ease forwards"
       >
         <Flex
           w="100%"
           p={1}
-          h="19vh"
-          mt={2}
+          h={{base:"20vh",md:"23vh",xl:"21vh"}}
+          mt={{base:4,md:5,xl:4}}
           roundedTop="none"
           overflow="scroll"
           flexDir="column"

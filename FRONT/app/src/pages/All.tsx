@@ -11,14 +11,14 @@ export default function All() {
         p={1}
         opacity={0}
         transform="translateY(10px)"
-        animation="fadeIn 0.4s ease forwards"
+        animation="fadeIn 1s ease forwards"
       >
         <Searchbar />
 
         <Flex
           w="100%"
-          h="15.3vh"
-          mt={3}
+          h={{base:"16.3vh",md:"17.8vw",lg:"10vw"}}
+          mt={{base:2,lg:2.5}}
           roundedTop="none"
           roundedBottomLeft="20px"
           roundedBottomRight="20px"
