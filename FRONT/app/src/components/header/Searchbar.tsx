@@ -6,11 +6,11 @@ import Search from "../../Icons/Search";
 function Searchbar(){
       return(
         <>
-            <Box w={'100%'} h={"4vh"} mt={3} mb={-1} position={'relative'}  backdropFilter={'blur(100px)'}  display={'flex'} alignItems={'center'}>
-                <Box p={'3px'} position={'absolute'} rounded={"130px"} w={"84%"}  zIndex={9} left={0} bgImage={backgrounde2}  display={'flex'} alignItems={'center'} justifyContent={'center'} bgPos={'top'}>
+            <Box w={'100%'}   h={"4vh"} mt={{base:4,md:3}} mb={-1} position={'relative'}  backdropFilter={'blur(100px)'}  display={'flex'} alignItems={'center'}>
+                <Box p={'3px'} position={'absolute'} rounded={"130px"} w={{base:"86%",lg:"83%"}}  zIndex={9} left={0} bgImage={backgrounde2}  display={'flex'} alignItems={'center'} justifyContent={'center'} bgPos={'top'}>
                     <Input  
                         type="text"
-                        fontSize="21px"
+                        fontSize="18px"
                         fontFamily="serif"
                         fontWeight="700"
                         color="#e0f0f0ff"
@@ -20,7 +20,7 @@ function Searchbar(){
                         w="100%"
                         rounded="100px"
                         placeholder="Search..."
-                        _placeholder={{ fontSize: "20px", color: "#82d5d5ff" }}
+                        _placeholder={{ fontSize: "17px", color: "#82d5d5ff" }}
 
                         _focus={{
                         outline: "none",
@@ -41,9 +41,9 @@ function Searchbar(){
                         }}
                     />
                 </Box>
-                <Text bg={"red"} position={'absolute'} left={"16vw"} w={'40px'} h={'5px'}  bgImg={backgrounde2} bgPos={'right'} />
-                <Box bg={'red'}  bgImage={backgrounde2} ml={"-2px"} display={'flex'} justifyContent={'center'} _placeholder={{fontsize:"10px"}}  bgPos={'center'} transition="transform 0.15s ease"
-              _active={{transform: "scale(0.8)",}}   alignItems={'center'} pos={'absolute'} overflow={'hidden'}  border={"7px double black"} w={'50px'} h={'50px'} rounded={'100px'} left={'17.5vw'} zIndex={2}>
+                {/* <Text bg={"red"}   position={'absolute'}    left={{base:"60vw",sm:"40vw",md:"33vw",lg:"26vw",xl:"16vw","2xl":"16vw"}}   w={{base:"40px","2xl":'70px'}} h={'5px'}  bgImg={backgrounde2} bgPos={'right'} /> */}
+                <Box bg={'red'}    bgImage={backgrounde2} ml={"-2px"} display={'flex'} justifyContent={'center'} _placeholder={{fontsize:"10px"}}  bgPos={'center'} transition="transform 0.15s ease"
+              _active={{transform: "scale(0.8)",}}   alignItems={'center'} pos={'absolute'} overflow={'hidden'}  border={"7px double black"} w={{base:"40px",sm:"38px",md:"45px",lg:'47px',xl:"45px"}} h={{base:"40px",sm:"38px",md:"45px",lg:'47px',xl:"44px"}} rounded={'100px'} left={{base:"66vw",sm:"47vw",md:"34.5vw",lg:'28vw',xl:"16.8vw", "2xl":"17.7vw"}} zIndex={2}>
                     <Button w={'130px'} h={'110px'} bgImage={backgrounde2} _hover={{opacity:1}}    transition="transform 0.15s ease"
               _active={{transform: "scale(0.8)",}}    bgPos={'center'}   rounded={"full"} > <Search/></Button>
                 </Box>
