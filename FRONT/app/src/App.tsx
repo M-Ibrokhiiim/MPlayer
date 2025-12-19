@@ -3,7 +3,10 @@ import {
   Box,
   Flex
 } from "@chakra-ui/react"
-import Header from "./components/header/Header";
+
+// SECTIONS
+import Header from "./components/header/Header";  
+import MAIN from "./components/main/MAIN";
 import { useState } from "react";
 
 function App() {
@@ -16,8 +19,8 @@ function App() {
        <Box border={'1px solid yellow'}  
         overflow={'hidden'}
         w={{base:"96vw", sm:"70vw",md:"50vw",lg:"40vw", xl:"28vw","2xl":"24vw"}} 
-        h={{base:isOpenedList ? '85vh' :"80vh", sm:isOpenedList ? "90vw" :"80vh",md:isOpenedList ? "95vw" :"75vh",lg:isOpenedList ? "90vh" :"68vw", xl: isOpenedList ? "90vh" :"70vh","2xl": isOpenedList ? "78vh" : "70vh"}} 
-        mt={{base:"20vw",sm:"10vh",xl:isOpenedList ? "3.5vw" : "8vw","2xl":"6vw"}} 
+        h={{base:isOpenedList ? '85vh' :"80vh", sm:isOpenedList ? "90vw" :"80vh",md:isOpenedList ? "95vw" :"75vh",lg:isOpenedList ? "90vh" :"68vw", xl: isOpenedList ? "90vh" :"80vh","2xl": isOpenedList ? "78vh" : "70vh"}} 
+        mt={{base:"20vw",sm:"10vh",xl:isOpenedList ? "3.5vw" : "5vw","2xl":"6vw"}} 
         borderRadius={{base:"30px"}}
         p={"25px"}
         >
@@ -27,6 +30,9 @@ function App() {
           isID={isID}
           setID={setID}
          />
+         {isOpenedList ? '' : <MAIN/>}
+         
+
        </Box>
 
     </Flex>

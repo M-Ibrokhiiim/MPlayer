@@ -38,7 +38,7 @@ export default function All() {
         </Flex>
       </Box>
 
-      {/* keyframes */}
+       
       <style>
         {`
           @keyframes fadeIn {

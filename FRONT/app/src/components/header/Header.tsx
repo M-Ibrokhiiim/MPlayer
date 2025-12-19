@@ -11,6 +11,7 @@ import Menu from "../../Icons/Menu";
 import Add from "../../Icons/Add";
 import { useState } from "react";
 import {Router,Route,useNavigate,Routes } from "react-router-dom"
+import FileUploader from "./FileUploader";
 
 import buttonsBG from "../../backgrounds/buttonsBG.jpg"
 import Favourited from "../../pages/Fovourited";
@@ -41,18 +42,7 @@ function Header({isOpenedList,isID,setID,setList}:Props){
         <Box  mt={6}   display={"flex"} flexDir={"column"} gap={2}   animation="headerFade 0.3s ease forwards" >
            <Flex justifyContent = {"space-between"} animation="headerFade 0.3s ease forwards">
             {!isOpenedList ?
-              <Button borderRadius={'full'}  
-              boxShadow={"0 0 170px 9px white"}
-              bgImage={`${buttonsBG}`} 
-              bgPos={"center"} 
-              _hover={{opacity:1}} 
-              transition="transform 0.15s ease"
-              _active={{transform: "scale(0.8)",}} 
-              border={"2px solid black"}  
-              w={{base:"50px","2xl":"57px"}} 
-              h={{base:"50px", "2xl":"55px"}}>
-                <Add/>
-              </Button>
+              <FileUploader />
               :""
              }
              

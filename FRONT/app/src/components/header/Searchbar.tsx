@@ -16,7 +16,7 @@ function Searchbar(){
                         color="#e0f0f0ff"
                         bg="BLACK"
                         border="2px solid black"
-                        h={{base:"3vh",xl:"3.4vh","2xl":"5vh"}}
+                        h={{base:"3vh",xl:"3.4vh","2xl":"4vh"}}
                         w="100%"
                         rounded="100px"
                         placeholder="Search..."
@@ -43,7 +43,7 @@ function Searchbar(){
                 </Box>
                 {/* <Text bg={"red"}   position={'absolute'}    left={{base:"60vw",sm:"40vw",md:"33vw",lg:"26vw",xl:"16vw","2xl":"16vw"}}   w={{base:"40px","2xl":'70px'}} h={'5px'}  bgImg={backgrounde2} bgPos={'right'} /> */}
                 <Box bg={'red'}    bgImage={backgrounde2} ml={"-2px"} display={'flex'} justifyContent={'center'} _placeholder={{fontsize:"10px"}}  bgPos={'center'} transition="transform 0.15s ease"
-              _active={{transform: "scale(0.8)",}}   alignItems={'center'} pos={'absolute'} overflow={'hidden'}  border={"7px double black"} w={{base:"40px",sm:"38px",md:"40px",lg:'47px',xl:"48px","2xl":"60px"}} h={{base:"40px",sm:"38px",md:"40px",lg:'47px',xl:"47px","2xl":"50px"}} rounded={'100px'} left={{base:"66vw",sm:"47vw",md:"35vw",lg:'28vw',xl:"19.8vw", "2xl":"17.7vw"}} zIndex={2}>
+              _active={{transform: "scale(0.8)",}}   alignItems={'center'} pos={'absolute'} overflow={'hidden'}  border={"7px double black"} w={{base:"40px",sm:"38px",md:"40px",lg:'47px',xl:"48px","2xl":"55px"}} h={{base:"40px",sm:"38px",md:"40px",lg:'47px',xl:"47px","2xl":"55px"}} rounded={'100px'} left={{base:"87%",sm:"87.8%",md:"88%",lg:'28vw',xl:"87%", "2xl":"87%"}} zIndex={2}>
                     <Button w={'130px'} h={'110px'} bgImage={backgrounde2} _hover={{opacity:1}}    transition="transform 0.15s ease"
               _active={{transform: "scale(0.8)",}}    bgPos={'center'}   rounded={"full"} > <Search/></Button>
                 </Box>
