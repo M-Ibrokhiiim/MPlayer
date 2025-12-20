@@ -45,8 +45,9 @@ function Header({isOpenedList,isID,setID,setList}:Props){
 
 
     // Sound player function
-const SoundPlay = (sound: string, leave: boolean) => {
+const SoundPlay = (sound: string, leave: boolean,defaultPage:boolean) => {
   if (!Sound.current) return;
+  if(defaultPage) navigate('/all')
 
   const audio = Sound.current;
  
@@ -65,8 +66,7 @@ const SoundPlay = (sound: string, leave: boolean) => {
       return(
         <>
         <Box  mt={6}   display={"flex"} flexDir={"column"} gap={2}   animation="headerFade 0.3s ease forwards" >
-          
-
+        
           <audio ref={Sound}/>
 
 
@@ -76,7 +76,7 @@ const SoundPlay = (sound: string, leave: boolean) => {
               :""
              }
              
-             { isOpenedList ? <Button onClick={()=>{SoundPlay(ListsSound,false)}}
+             { isOpenedList ? <Button onClick={()=>{SoundPlay(ListsSound,false,false)}}
               borderRadius={'full'} 
               boxShadow={"0 0 170px 7px white"}
               bgImage={`${buttonsBG}`} 
@@ -103,7 +103,7 @@ const SoundPlay = (sound: string, leave: boolean) => {
               border={"2px solid black"}  
               w={{base:"50px","2xl":"57px"}} 
               h={{base:"50px", "2xl":"55px"}}
-              onClick={()=>{SoundPlay(ListsSound,true)}}
+              onClick={()=>{SoundPlay(ListsSound,true,true)}}
               >
                  <Menu/>
               </Button>
