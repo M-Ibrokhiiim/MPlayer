@@ -18,7 +18,7 @@ const rotate = keyframes`
 
  return(
     <>
-    <Box   display={'flex'} bg="white" justifyContent={'center'} mt={{base:"40px",xl:"35px"}} pos={'relative'} transform="translateY(10px)" animation="fadeIn 1s ease forwards" >
+    <Box   display={'flex'}  justifyContent={'center'} mt={{base:"40px",xl:"35px"}} pos={'relative'} transform="translateY(10px)" animation="fadeIn 1s ease forwards" >
         <Box border={'2px solid #6bea38ff'} ml={-6} position={'relative'} rounded={'full'} p={'2px'}  animation={`${rotate} 50s linear infinite`}>
           <Image
            src={MusicPIC}
@@ -39,9 +39,6 @@ const rotate = keyframes`
          position={'absolute'}
             src={Tonearm}
          /> 
-        <Box>
-          <Text color={'white'}>a</Text>
-        </Box>
          <style>
         {`
           @keyframes fadeIn {

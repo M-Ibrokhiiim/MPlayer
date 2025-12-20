@@ -19,9 +19,9 @@ function App() {
     <Flex w={'100%'} bg={'black'} h={'100vh'} textOverflow={'hidden'} justifyContent={'center'} >
        <Box border={'1px solid yellow'}  
         overflow={'hidden'}
-        w={{base:"96vw", sm:"70vw",md:"50vw",lg:"40vw", xl:"28vw","2xl":"24vw"}} 
-        h={{base:isOpenedList ? '85vh' :"80vh", sm:isOpenedList ? "90vw" :"80vh",md:isOpenedList ? "95vw" :"75vh",lg:isOpenedList ? "90vh" :"68vw", xl: isOpenedList ? "90vh" :"85vh","2xl": isOpenedList ? "78vh" : "75vh"}} 
-        mt={{base:"20vw",sm:"10vh",xl:isOpenedList ? "3.5vw" : "5vw","2xl":"6vw"}} 
+        w={{base:"96vw", sm:isOpenedList ? "75%" :"70%",md:"47%",lg:"40vw", xl:"28vw","2xl":"24vw"}} 
+        h={{base:isOpenedList ? '80%' :"80%", sm:isOpenedList ? "80vh" :"80vh",md:isOpenedList ? "90vh" :"75vh",lg:isOpenedList ? "90vh" :"68vw", xl: isOpenedList ? "90%" :"93%","2xl": isOpenedList ? "85%" : "85%"}} 
+        mt={{base:"20vw",sm:"10vh",md:"15%", xl:isOpenedList ? "3.5vw" : "3%","2xl":"3%"}} 
         borderRadius={{base:"30px"}}
         p={"25px"}
         >
@@ -32,10 +32,10 @@ function App() {
           setID={setID}
          />
          {isOpenedList ? '' : <MAIN/>}
-         <Box bg={'white'} w={'100%'}  mt={{base:isOpenedList ? "14%" : "2%",lg:isOpenedList ? "15%" : "2%"}} mb={0} display={'flex'} justifyContent={'center'}>
-            <Flex bg="red.100" flexDirection={'column'} w={'50%'} color={'white'} justifyContent={'center'} alignItems={'center'}>
-             <Text fontFamily={'cursive'} fontSize={'25px'} >Life is going on </Text>
-             <Text fontFamily={'emoji'} fontSize={'20px'}>2Pac</Text>
+         <Box  w={'100%'} bg={'red.200'}  mt={{base:isOpenedList ? "14%" : "2%",lg:isOpenedList ? "21%" : "4%"}} mb={0} display={'flex'} justifyContent={'center'}>
+            <Flex  flexDirection={'column'}  w={'50%'} color={'white'} justifyContent={'center'} alignItems={'center'}>
+             <Text fontFamily={'cursive'} fontSize={{base:"28px",md:'30px'}} bg={'red.300'} textAlign={'center'} w={{base:"150%",md:'40vw'}} >Life is going on </Text>
+             <Text fontFamily={'emoji'} fontSize={{base:"25px",md:'30px'}}>2Pac</Text>
             </Flex> 
          </Box>
          <CONTROLLERS
