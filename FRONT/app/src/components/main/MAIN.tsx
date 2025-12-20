@@ -19,7 +19,7 @@ const rotate = keyframes`
  return(
     <>
     <Box   display={'flex'}  justifyContent={'center'} mt={{base:"40px",xl:"10px"}} pos={'relative'} transform="translateY(10px)" animation="fadeIn 1s ease forwards" >
-        <Box border={'2px solid #6bea38ff'} ml={-3} position={'relative'} rounded={'full'} p={'2px'}  animation={`${'rotate'} 50s linear infinite`}>
+        <Box border={'2px solid #6bea38ff'} ml={-3} position={'relative'} rounded={'full'} p={'2px'}  animation={`${rotate} 50s linear infinite`}>
           <Image
            src={MusicPIC}
            w={{base:"230px",xl:"240px"}}
@@ -31,7 +31,7 @@ const rotate = keyframes`
          
         </Box>
         <Image 
-         w={{base:"130px", xl:'120px',"2xl":"150px"}}
+         w={{base:"140px", xl:'120px',"2xl":"150px"}}
          h={{base:"190px", xl:'160px',"2xl":"210px"}}
          top={{base:"10px",xl:'30px',"2xl":"15px"}}
          left={{base:"58%",md:"58%",lg:"58%", xl:'66%',"2xl":"63%"}}
