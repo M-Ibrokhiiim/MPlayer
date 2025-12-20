@@ -1,6 +1,6 @@
-import { Box,Flex } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react";
+import Music from "../components/header/musicList";
 
-import Music from "../components/header/musicList"
 export default function Favourited() {
   return (
     <>
@@ -17,8 +17,14 @@ export default function Favourited() {
         <Flex
           w="100%"
           p={1}
-          h={{base:"20vh",md:"23vh",lg:"20vh", xl:"10vw","2xl":"10vw"}}
-          mt={{base:4,md:5,xl:4}}
+          h={{
+            base: "20vh",
+            md: "23vh",
+            lg: "20vh",
+            xl: "10vw",
+            "2xl": "10vw"
+          }}
+          mt={{ base: 4, md: 5, xl: 4 }}
           roundedTop="none"
           overflow="scroll"
           flexDir="column"
@@ -36,7 +42,6 @@ export default function Favourited() {
           </Box>
         </Flex>
       </Box>
-
 
       <style>
         {`
