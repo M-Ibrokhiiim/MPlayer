@@ -17,7 +17,7 @@ export default function All() {
 
         <Flex
           w="100%"
-          h={{base:"16.3vh",md:"17.8vw",lg:"10vw"}}
+          h={{base:"16.3vh",md:"17vw",lg:"14vw",xl:"10.4vw","2xl":"8vw"}}
           mt={{base:2,lg:2.5}}
           roundedTop="none"
           roundedBottomLeft="20px"
