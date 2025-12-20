@@ -17,7 +17,7 @@ export default function Favourited() {
         <Flex
           w="100%"
           p={1}
-          h={{base:"20vh",md:"23vh",xl:"21vh"}}
+          h={{base:"20vh",md:"23vh",lg:"20vh", xl:"10vw","2xl":"10vw"}}
           mt={{base:4,md:5,xl:4}}
           roundedTop="none"
           overflow="scroll"

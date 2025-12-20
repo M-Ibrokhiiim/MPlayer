@@ -8,7 +8,7 @@ import Pause from '../../Icons/pause.png'
 
 export default function AudioVolumeController({isOpenedList}:{isOpenedList:boolean}) {
   return (
-    <Box p={4}  display={'flex'}   mt={{base:isOpenedList ? "8%" :"5%", xl:isOpenedList ? 1:-1,"2xl":isOpenedList ? 1:'1%'}} gap={'25px'} flexDir={'column'} alignItems={'center'} >
+    <Box p={4}  display={'flex'}   mt={{base:isOpenedList ? "8%" :"5%", lg:isOpenedList ? "3%" : "5%",xl:isOpenedList ? '-20px': "-8%","2xl":isOpenedList ? 1:'-4%'}} gap={'25px'} flexDir={'column'} alignItems={'center'} >
         <Box  w={'100%'} >
             <audio src="your-audio-file.mp3" />
 
@@ -28,18 +28,18 @@ export default function AudioVolumeController({isOpenedList}:{isOpenedList:boole
                  border={"1px solid #80fc4e"}
                 >
                 <Box bg='black'  p={5}>
-                    <Text color={'white'}   w={{base:'6.5vw',sm:"5vw"}}   h={{base:'6.5vw',sm:"5vw"}}  rounded={'full'}    backgroundImage={buttonsBG}   bgPos={'center'}></Text> 
+                    <Text color={'white'}   w={{base:'6.5vw',sm:"5vw",md:"3vw",lg:"2.5vw",xl:"1.8vw","2xl":"1.6vw"}}   h={{base:'6.5vw',sm:"5vw",md:"3vw",lg:"2.5vw",xl:"1.8vw","2xl":"1.6vw"}}  rounded={'full'}    backgroundImage={buttonsBG}   bgPos={'center'}></Text> 
                 </Box>
                 </SliderThumb>
             </Slider>
         </Box>
-        <Flex   w={{base:"65vw",sm:"49vw"}}  mt={4}  justifyContent={'space-between'} alignItems={'center'}>
+        <Flex   w={{base:"65vw",sm:"49vw",md:"35vw",lg:"27vw",xl:"20vw","2xl":"17vw"}}  mt={4}  justifyContent={'space-between'} alignItems={'center'}>
             
                 <Button
-                    boxShadow={'0 0 150px 2px white'}
+                    boxShadow={'0 0 150px 13px white'}
                     rounded="full"
-                    h={{base:"52px",sm:"53px",xl:"55px"}}
-                    w={{base:"52px",sm:"53px",xl:"55px"}}
+                    h={{base:"52px",sm:"53px",xl:"52px"}}
+                    w={{base:"52px",sm:"53px",xl:"52px"}}
                     bgImage={buttonsBG}
                     bgPos="center"
                     transition="transform 0.15s ease"
@@ -51,8 +51,8 @@ export default function AudioVolumeController({isOpenedList}:{isOpenedList:boole
                 <Button
                     boxShadow={'0 0 150px 1px white'}
                     rounded="full"
-                    h={{base:"68px",sm:"67px",xl:"70px"}}
-                    w={{base:"68px",sm:"67px",xl:"70px"}}
+                    h={{base:"68px",sm:"67px",xl:"65px"}}
+                    w={{base:"68px",sm:"67px",xl:"65px"}}
                     bgImage={buttonsBG}
                     bgPos="center"
                     transition="transform 0.1s ease"
@@ -62,10 +62,10 @@ export default function AudioVolumeController({isOpenedList}:{isOpenedList:boole
                 <Image w={{ "2xl": "40px" }} h={{ "2xl": "30px" }} src={Pause} />
                 </Button>
                 <Button
-                    boxShadow={'0 0 150px 2px white'}
+                    boxShadow={'0 0 150px 13px white'}
                     rounded="full"
-                    h={{base:"52px",sm:"53px",xl:"55px"}}
-                    w={{base:"52px",sm:"53px",xl:"55px"}}
+                    h={{base:"52px",sm:"53px",xl:"52px"}}
+                    w={{base:"52px",sm:"53px",xl:"52px"}}
                     bgImage={buttonsBG}
                     bgPos="center"
                     transition="transform 0.15s ease"
