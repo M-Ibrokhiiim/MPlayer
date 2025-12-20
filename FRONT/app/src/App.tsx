@@ -12,7 +12,8 @@ import CONTROLLERS from "./components/controllers/CONTROLLERS";
 
 function App() {
   const [isOpenedList,setList] = useState(false);
-  const [isID,setID] = useState(1)
+  const [isPlayed,setPlay] = useState(false);
+  const [isID,setID] = useState(1);
 
 
   return ( 
@@ -31,8 +32,8 @@ function App() {
           isID={isID}
           setID={setID}
          />
-         {isOpenedList ? '' : <MAIN/>}
-         <Box  w={'100%'}    mt={{base:isOpenedList ? "14%" : "2%",lg:isOpenedList ? "12%" : "5%",xl:isOpenedList ? "16%" :"5%"}} mb={{base:"-1",xl:"5"}} display={'flex'} justifyContent={'center'}>
+         {isOpenedList ? '' : <MAIN isPlayed={isPlayed} />}
+         <Box  w={'100%'}    mt={{base:isOpenedList ? "14%" : "2%",lg:isOpenedList ? "12%" : "5%",xl:isOpenedList ? "19%" :"5%"}} mb={{base:"-1",xl:"5"}} display={'flex'} justifyContent={'center'}>
             <Flex  flexDirection={'column'}  w={'50%'} color={'white'} justifyContent={'center'} alignItems={'center'}>
              <Text fontFamily={'cursive'} fontSize={{base:"28px",md:'30px',xl:"25px"}}   textAlign={'center'} w={{base:"150%",md:'40vw'}} >Life is going on </Text>
              <Text fontFamily={'emoji'} fontSize={{base:"25px",md:'30px',xl:"25px"}}>2Pac</Text>
@@ -40,6 +41,8 @@ function App() {
          </Box>
          <CONTROLLERS
           isOpenedList={isOpenedList}
+          isPlayed={isPlayed}
+          setPlay={setPlay}
          />
        </Box>
       <Box>

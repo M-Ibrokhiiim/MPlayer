@@ -1,12 +1,19 @@
+import React from "react";
 import { Box, Slider, SliderTrack, SliderFilledTrack, SliderThumb,Flex, Button,Image,Text} from "@chakra-ui/react";
 import buttonsBG from "../../backgrounds/buttonsBG.jpg";
 import Next from '../../Icons/forward-button.png';
 import Back from '../../Icons/rewind-button.png'
 import Pause from '../../Icons/pause.png'
-// import Play from '../../Icons/pause.png'
+import Play from '../../Icons/play.png'
 
 
-export default function AudioVolumeController({isOpenedList}:{isOpenedList:boolean}) {
+// Type checking
+interface Props{
+    isOpenedList:boolean,isPlayed:boolean,setPlay:React.Dispatch<React.SetStateAction<boolean>>
+}
+
+
+export default function AudioVolumeController({isOpenedList,isPlayed,setPlay}:Props) {
   return (
     <Box p={4}  display={'flex'}   mt={{base:isOpenedList ? "8%" :"5%", lg:isOpenedList ? "3%" : "5%",xl:isOpenedList ? '-20px': "-8%","2xl":isOpenedList ? 1:'-4%'}} gap={'25px'} flexDir={'column'} alignItems={'center'} >
         <Box  w={'100%'} >
@@ -48,7 +55,10 @@ export default function AudioVolumeController({isOpenedList}:{isOpenedList:boole
                     >
                     <Image w={{ "2xl": "40px" }} h={{ "2xl": "30px" }} src={Back} ml={-1} />
                 </Button>
+
+                {isPlayed ?
                 <Button
+                    onClick={()=>setPlay(!isPlayed)}
                     boxShadow={'0 0 150px 1px white'}
                     rounded="full"
                     h={{base:"68px",sm:"67px",xl:"65px"}}
@@ -61,6 +71,22 @@ export default function AudioVolumeController({isOpenedList}:{isOpenedList:boole
                 >
                 <Image w={{ "2xl": "40px" }} h={{ "2xl": "30px" }} src={Pause} />
                 </Button>
+                : <Button
+                    onClick={()=>setPlay(!isPlayed)}
+                    boxShadow={'0 0 150px 1px white'}
+                    rounded="full"
+                    h={{base:"68px",sm:"67px",xl:"65px"}}
+                    w={{base:"68px",sm:"67px",xl:"65px"}}
+                    bgImage={buttonsBG}
+                    bgPos="center"
+                    transition="transform 0.1s ease"
+                    _hover={{ opacity: 1 }}
+                    _active={{ transform: "scale(0.9)", opacity: 1 }}
+                >
+                <Image w={{ "2xl": "40px" }} h={{ "2xl": "30px" }} ml={1} src={Play} />
+                </Button>
+                }
+
                 <Button
                     boxShadow={'0 0 150px 13px white'}
                     rounded="full"
