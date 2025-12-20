@@ -1,8 +1,6 @@
-import {Box,Flex} from '@chakra-ui/react'
-
-import Searchbar from '../components/header/Searchbar';
-import Music from '../components/header/musicList';
-
+import { Box, Flex } from "@chakra-ui/react";
+import Searchbar from "../components/header/Searchbar";
+import Music from "../components/header/musicList";
 
 export default function All() {
   return (
@@ -17,8 +15,14 @@ export default function All() {
 
         <Flex
           w="100%"
-          h={{base:"16.3vh",md:"17vw",lg:"14vw",xl:"10.4vw","2xl":"8vw"}}
-          mt={{base:2,lg:2.5}}
+          h={{
+            base: "16.3vh",
+            md: "17vw",
+            lg: "14vw",
+            xl: "10.4vw",
+            "2xl": "8vw"
+          }}
+          mt={{ base: 2, lg: 2.5 }}
           roundedTop="none"
           roundedBottomLeft="20px"
           roundedBottomRight="20px"
@@ -38,7 +42,6 @@ export default function All() {
         </Flex>
       </Box>
 
-       
       <style>
         {`
           @keyframes fadeIn {
