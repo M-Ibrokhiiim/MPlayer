@@ -9,12 +9,16 @@ import  All from "../../pages/All"
 import Chevrone from "../../Icons/Chevrone";
 import Menu from "../../Icons/Menu";
 import Add from "../../Icons/Add";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {Router,Route,useNavigate,Routes } from "react-router-dom"
 import FileUploader from "./FileUploader";
 
+// Icons
 import buttonsBG from "../../backgrounds/buttonsBG.jpg"
 import Favourited from "../../pages/Fovourited";
+
+// Button sounds
+import ListsSound from "../../sounds/ ListsSound.wav"
 
 
 // TYPE CHECKING
@@ -30,23 +34,49 @@ interface Props{
 
 function Header({isOpenedList,isID,setID,setList}:Props){
     const navigate = useNavigate()
+    const Sound = useRef<HTMLAudioElement | null>(null);
+
     // Navigation function for routes
     const navigation=(id:number,route:string)=>{
+          Sound.current?.play()
           setID(id)
           navigate(route)
       }
 
 
+    // Sound player function
+const SoundPlay = (sound: string, leave: boolean) => {
+  if (!Sound.current) return;
+
+  const audio = Sound.current;
+ 
+  setList(leave);
+  
+  audio.pause();
+   
+  audio.src = sound;
+  audio.currentTime = 0;
+  audio.load();
+
+  audio.play().catch(() => {});
+};
+
+
       return(
         <>
         <Box  mt={6}   display={"flex"} flexDir={"column"} gap={2}   animation="headerFade 0.3s ease forwards" >
+          
+
+          <audio ref={Sound}/>
+
+
            <Flex justifyContent = {"space-between"} animation="headerFade 0.3s ease forwards">
             {!isOpenedList ?
-              <FileUploader />
+              <FileUploader  />
               :""
              }
              
-             { isOpenedList ? <Button onClick={()=>{setList(false)}}
+             { isOpenedList ? <Button onClick={()=>{SoundPlay(ListsSound,false)}}
               borderRadius={'full'} 
               boxShadow={"0 0 170px 7px white"}
               bgImage={`${buttonsBG}`} 
@@ -73,7 +103,7 @@ function Header({isOpenedList,isID,setID,setList}:Props){
               border={"2px solid black"}  
               w={{base:"50px","2xl":"57px"}} 
               h={{base:"50px", "2xl":"55px"}}
-              onClick={()=>{setList(!isOpenedList)}}
+              onClick={()=>{SoundPlay(ListsSound,true)}}
               >
                  <Menu/>
               </Button>
