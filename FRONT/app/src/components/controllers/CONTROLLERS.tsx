@@ -3,6 +3,8 @@ import buttonsBG from "../../backgrounds/buttonsBG.jpg";
 import Next from '../../Icons/forward-button.png';
 import Back from '../../Icons/rewind-button.png'
 import Pause from '../../Icons/pause.png'
+// import Play from '../../Icons/pause.png'
+
 
 export default function AudioVolumeController({isOpenedList}:{isOpenedList:boolean}) {
   return (
@@ -26,12 +28,12 @@ export default function AudioVolumeController({isOpenedList}:{isOpenedList:boole
                 />
             </Slider>
         </Box> */}
-        <Flex   w={'80%'} mt={isOpenedList ? "60%" : "40%"} justifyContent={'space-between'} alignItems={'center'}>
+        <Flex   w={'80%'} mt={isOpenedList ? "38%" : "15%"} justifyContent={'space-between'} alignItems={'center'}>
                 <Button
                     boxShadow={'0 0 150px 2px white'}
                     rounded="full"
-                    h="60px"
-                    w="60px"
+                    h="55px"
+                    w="55px"
                     bgImage={buttonsBG}
                     bgPos="center"
                     transition="transform 0.15s ease"
@@ -43,8 +45,8 @@ export default function AudioVolumeController({isOpenedList}:{isOpenedList:boole
                 <Button
                     boxShadow={'0 0 150px 2px white'}
                     rounded="full"
-                    h="80px"
-                    w="80px"
+                    h="70px"
+                    w="70px"
                     bgImage={buttonsBG}
                     bgPos="center"
                     transition="transform 0.15s ease"
@@ -56,8 +58,8 @@ export default function AudioVolumeController({isOpenedList}:{isOpenedList:boole
                 <Button
                     boxShadow={'0 0 150px 2px white'}
                     rounded="full"
-                    h="60px"
-                    w="60px"
+                    h="55px"
+                    w="55px"
                     bgImage={buttonsBG}
                     bgPos="center"
                     transition="transform 0.15s ease"
