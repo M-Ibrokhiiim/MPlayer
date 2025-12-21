@@ -87,7 +87,7 @@ function MAIN({ isPlayed }: Props) {
 
         <Image
           w={{ base: "140px", xl: "120px", "2xl": "150px" }}
-          h={{ base: "190px", xl: "160px", "2xl": "210px" }}
+          h={{ base: "190px", xl: "160px", "2xl": "200px" }}
           top={{ base: "10px", xl: "30px", "2xl": "15px" }}
           left={{
             base: isPlayed ? "61%" : "61%",
